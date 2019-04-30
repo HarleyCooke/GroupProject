@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ballstatsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PLAYER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TEAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AGE" Type="Double" />
+    <Property Name="GP" Type="Double" />
+    <Property Name="W" Type="Double" />
+    <Property Name="L" Type="Double" />
+    <Property Name="MIN" Type="Double" />
+    <Property Name="PTS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FGM" Type="Double" />
+    <Property Name="FGA" Type="Double" />
+    <Property Name="FG_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C3PM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C3PA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C3P_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FTM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FTA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FT_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OREB" Type="Double" />
+    <Property Name="DREB" Type="Double" />
+    <Property Name="REB" Type="Double" />
+    <Property Name="AST" Type="Double" />
+    <Property Name="TOV" Type="Double" />
+    <Property Name="STL" Type="Double" />
+    <Property Name="BLK" Type="Double" />
+    <Property Name="PF" Type="Double" />
+    <Property Name="FP" Type="Double" />
+    <Property Name="DD2" Type="Double" />
+    <Property Name="TD3" Type="Double" />
+    <Property Name="C___" Type="Double" />
+    <Property Name="RAT" Type="Double" />
+    <Property Name="DIFF" Type="Double" />
+    <Property Name="RPMRAT" Type="Double" />
+    <Property Name="ORRAT" Type="Double" />
+    <Property Name="W_L" Type="Double" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="USERTEAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="User" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TeamName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Player1" Type="Int32" />
+    <Property Name="Player2" Type="Int32" />
+    <Property Name="Player3" Type="Int32" />
+    <Property Name="Player4" Type="Int32" />
+    <Property Name="Player5" Type="Int32" />
+    <Property Name="Player6" Type="Int32" />
+    <Property Name="Player7" Type="Int32" />
+    <Property Name="Player8" Type="Int32" />
+    <Property Name="Player9" Type="Int32" />
+    <Property Name="Player10" Type="Int32" />
+    <Property Name="Player11" Type="Int32" />
+    <Property Name="Player12" Type="Int32" />
+    <Property Name="Player13" Type="Int32" />
+    <Property Name="Player14" Type="Int32" />
+    <Property Name="Player15" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <Association Name="FK__USERTEAM__Player__00DF2177">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__01D345B0">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__02C769E9">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__03BB8E22">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__04AFB25B">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__05A3D694">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player11" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__0697FACD">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player12" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__078C1F06">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player13" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__0880433F">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player14" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__09746778">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player15" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__0A688BB1">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__0B5CAFEA">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__0C50D423">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__0D44F85C">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERTEAM__Player__7FEAFD3E">
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="USERTEAM" Type="Self.USERTEAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLAYER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USERTEAM">
+        <PropertyRef Name="Player5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ballstatsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PLAYER" EntityType="Self.PLAYER" />
+    <EntitySet Name="USERTEAM" EntityType="Self.USERTEAM" />
+    <AssociationSet Name="FK__USERTEAM__Player__00DF2177" Association="Self.FK__USERTEAM__Player__00DF2177">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__01D345B0" Association="Self.FK__USERTEAM__Player__01D345B0">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__02C769E9" Association="Self.FK__USERTEAM__Player__02C769E9">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__03BB8E22" Association="Self.FK__USERTEAM__Player__03BB8E22">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__04AFB25B" Association="Self.FK__USERTEAM__Player__04AFB25B">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__05A3D694" Association="Self.FK__USERTEAM__Player__05A3D694">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__0697FACD" Association="Self.FK__USERTEAM__Player__0697FACD">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__078C1F06" Association="Self.FK__USERTEAM__Player__078C1F06">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__0880433F" Association="Self.FK__USERTEAM__Player__0880433F">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__09746778" Association="Self.FK__USERTEAM__Player__09746778">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__0A688BB1" Association="Self.FK__USERTEAM__Player__0A688BB1">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__0B5CAFEA" Association="Self.FK__USERTEAM__Player__0B5CAFEA">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__0C50D423" Association="Self.FK__USERTEAM__Player__0C50D423">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__0D44F85C" Association="Self.FK__USERTEAM__Player__0D44F85C">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERTEAM__Player__7FEAFD3E" Association="Self.FK__USERTEAM__Player__7FEAFD3E">
+      <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="USERTEAM" EntitySet="USERTEAM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

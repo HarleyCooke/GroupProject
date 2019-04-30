@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ballstatsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ALL">
+    <Key>
+      <PropertyRef Name="PLAYER" />
+      <PropertyRef Name="TEAM" />
+      <PropertyRef Name="YEAR" />
+    </Key>
+    <Property Name="PLAYER" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TEAM" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="AGE" Type="float" />
+    <Property Name="GP" Type="float" />
+    <Property Name="W" Type="float" />
+    <Property Name="L" Type="float" />
+    <Property Name="MIN" Type="float" />
+    <Property Name="PTS" Type="nvarchar" MaxLength="255" />
+    <Property Name="FGM" Type="float" />
+    <Property Name="FGA" Type="float" />
+    <Property Name="FG%" Type="nvarchar" MaxLength="255" />
+    <Property Name="3PM" Type="nvarchar" MaxLength="255" />
+    <Property Name="3PA" Type="nvarchar" MaxLength="255" />
+    <Property Name="3P%" Type="nvarchar" MaxLength="255" />
+    <Property Name="FTM" Type="nvarchar" MaxLength="255" />
+    <Property Name="FTA" Type="nvarchar" MaxLength="255" />
+    <Property Name="FT%" Type="nvarchar" MaxLength="255" />
+    <Property Name="OREB" Type="float" />
+    <Property Name="DREB" Type="float" />
+    <Property Name="REB" Type="float" />
+    <Property Name="AST" Type="float" />
+    <Property Name="TOV" Type="float" />
+    <Property Name="STL" Type="float" />
+    <Property Name="BLK" Type="float" />
+    <Property Name="PF" Type="float" />
+    <Property Name="FP" Type="float" />
+    <Property Name="DD2" Type="float" />
+    <Property Name="TD3" Type="float" />
+    <Property Name="+/-" Type="float" />
+    <Property Name="RAT" Type="float" />
+    <Property Name="DIFF" Type="float" />
+    <Property Name="RPMRAT" Type="float" />
+    <Property Name="ORRAT" Type="float" />
+    <Property Name="YEAR" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="W/L" Type="float" />
+  </EntityType>
+  <EntityType Name="PLAYER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PLAYER" Type="nvarchar" MaxLength="255" />
+    <Property Name="Position" Type="nvarchar" MaxLength="255" />
+    <Property Name="TEAM" Type="nvarchar" MaxLength="255" />
+    <Property Name="GP" Type="float" />
+    <Property Name="AGE" Type="float" />
+    <Property Name="W" Type="float" />
+    <Property Name="L" Type="float" />
+    <Property Name="MIN" Type="float" />
+    <Property Name="FGM" Type="float" />
+    <Property Name="FGA" Type="float" />
+    <Property Name="FG%" Type="float" />
+    <Property Name="TPM" Type="float" />
+    <Property Name="TPA" Type="float" />
+    <Property Name="TP%" Type="float" />
+    <Property Name="FTM" Type="float" />
+    <Property Name="FTA" Type="float" />
+    <Property Name="FT%" Type="float" />
+    <Property Name="OREB" Type="float" />
+    <Property Name="DREB" Type="float" />
+    <Property Name="REB" Type="float" />
+    <Property Name="AST" Type="float" />
+    <Property Name="TOV" Type="float" />
+    <Property Name="STL" Type="float" />
+    <Property Name="BLK" Type="float" />
+    <Property Name="PF" Type="float" />
+    <Property Name="FP" Type="float" />
+    <Property Name="DD2" Type="float" />
+    <Property Name="TD3" Type="float" />
+    <Property Name="+/-" Type="float" />
+    <Property Name="RAT" Type="float" />
+    <Property Name="W/L" Type="float" />
+    <Property Name="PLAYERVALUE" Type="float" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HashedPassword" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="USERTEAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TeamName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Player1" Type="int" />
+    <Property Name="Player2" Type="int" />
+    <Property Name="Player3" Type="int" />
+    <Property Name="Player4" Type="int" />
+    <Property Name="Player5" Type="int" />
+    <Property Name="Player6" Type="int" />
+    <Property Name="Player7" Type="int" />
+    <Property Name="Player8" Type="int" />
+    <Property Name="Player9" Type="int" />
+    <Property Name="Player10" Type="int" />
+    <Property Name="Player11" Type="int" />
+    <Property Name="Player12" Type="int" />
+    <Property Name="Player13" Type="int" />
+    <Property Name="Player14" Type="int" />
+    <Property Name="Player15" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ballstatsModelStoreContainer">
+    <EntitySet Name="ALL" EntityType="Self.ALL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PLAYER" EntityType="Self.PLAYER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERTEAM" EntityType="Self.USERTEAM" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

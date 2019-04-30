@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ballstatsModelStoreContainer" CdmEntityContainer="ballstatsEntities">
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="ballstatsModel.USERS">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="HashedPassword" ColumnName="HashedPassword" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLAYER">
+      <EntityTypeMapping TypeName="ballstatsModel.PLAYER">
+        <MappingFragment StoreEntitySet="PLAYER">
+          <ScalarProperty Name="PLAYERVALUE" ColumnName="PLAYERVALUE" />
+          <ScalarProperty Name="W_L" ColumnName="W/L" />
+          <ScalarProperty Name="RAT" ColumnName="RAT" />
+          <ScalarProperty Name="C___" ColumnName="+/-" />
+          <ScalarProperty Name="TD3" ColumnName="TD3" />
+          <ScalarProperty Name="DD2" ColumnName="DD2" />
+          <ScalarProperty Name="FP" ColumnName="FP" />
+          <ScalarProperty Name="PF" ColumnName="PF" />
+          <ScalarProperty Name="BLK" ColumnName="BLK" />
+          <ScalarProperty Name="STL" ColumnName="STL" />
+          <ScalarProperty Name="TOV" ColumnName="TOV" />
+          <ScalarProperty Name="AST" ColumnName="AST" />
+          <ScalarProperty Name="REB" ColumnName="REB" />
+          <ScalarProperty Name="DREB" ColumnName="DREB" />
+          <ScalarProperty Name="OREB" ColumnName="OREB" />
+          <ScalarProperty Name="FT_" ColumnName="FT%" />
+          <ScalarProperty Name="FTA" ColumnName="FTA" />
+          <ScalarProperty Name="FTM" ColumnName="FTM" />
+          <ScalarProperty Name="TP_" ColumnName="TP%" />
+          <ScalarProperty Name="TPA" ColumnName="TPA" />
+          <ScalarProperty Name="TPM" ColumnName="TPM" />
+          <ScalarProperty Name="FG_" ColumnName="FG%" />
+          <ScalarProperty Name="FGA" ColumnName="FGA" />
+          <ScalarProperty Name="FGM" ColumnName="FGM" />
+          <ScalarProperty Name="MIN" ColumnName="MIN" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="W" ColumnName="W" />
+          <ScalarProperty Name="AGE" ColumnName="AGE" />
+          <ScalarProperty Name="GP" ColumnName="GP" />
+          <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="NAME" ColumnName="PLAYER" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERTEAM">
+      <EntityTypeMapping TypeName="ballstatsModel.USERTEAM">
+        <MappingFragment StoreEntitySet="USERTEAM">
+          <ScalarProperty Name="Player15" ColumnName="Player15" />
+          <ScalarProperty Name="Player14" ColumnName="Player14" />
+          <ScalarProperty Name="Player13" ColumnName="Player13" />
+          <ScalarProperty Name="Player12" ColumnName="Player12" />
+          <ScalarProperty Name="Player11" ColumnName="Player11" />
+          <ScalarProperty Name="Player10" ColumnName="Player10" />
+          <ScalarProperty Name="Player9" ColumnName="Player9" />
+          <ScalarProperty Name="Player8" ColumnName="Player8" />
+          <ScalarProperty Name="Player7" ColumnName="Player7" />
+          <ScalarProperty Name="Player6" ColumnName="Player6" />
+          <ScalarProperty Name="Player5" ColumnName="Player5" />
+          <ScalarProperty Name="Player4" ColumnName="Player4" />
+          <ScalarProperty Name="Player3" ColumnName="Player3" />
+          <ScalarProperty Name="Player2" ColumnName="Player2" />
+          <ScalarProperty Name="Player1" ColumnName="Player1" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

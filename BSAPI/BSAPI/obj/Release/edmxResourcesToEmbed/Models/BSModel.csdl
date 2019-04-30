@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ballstatsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ballstatsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="USERS" EntityType="ballstatsModel.USERS" />
+    <EntitySet Name="PLAYER" EntityType="ballstatsModel.PLAYER" />
+    <EntitySet Name="USERTEAM" EntityType="ballstatsModel.USERTEAM" />
+  </EntityContainer>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HashedPassword" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PLAYER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TEAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GP" Type="Double" />
+    <Property Name="AGE" Type="Double" />
+    <Property Name="W" Type="Double" />
+    <Property Name="L" Type="Double" />
+    <Property Name="MIN" Type="Double" />
+    <Property Name="FGM" Type="Double" />
+    <Property Name="FGA" Type="Double" />
+    <Property Name="FG_" Type="Double" />
+    <Property Name="TPM" Type="Double" />
+    <Property Name="TPA" Type="Double" />
+    <Property Name="TP_" Type="Double" />
+    <Property Name="FTM" Type="Double" />
+    <Property Name="FTA" Type="Double" />
+    <Property Name="FT_" Type="Double" />
+    <Property Name="OREB" Type="Double" />
+    <Property Name="DREB" Type="Double" />
+    <Property Name="REB" Type="Double" />
+    <Property Name="AST" Type="Double" />
+    <Property Name="TOV" Type="Double" />
+    <Property Name="STL" Type="Double" />
+    <Property Name="BLK" Type="Double" />
+    <Property Name="PF" Type="Double" />
+    <Property Name="FP" Type="Double" />
+    <Property Name="DD2" Type="Double" />
+    <Property Name="TD3" Type="Double" />
+    <Property Name="C___" Type="Double" />
+    <Property Name="RAT" Type="Double" />
+    <Property Name="W_L" Type="Double" />
+    <Property Name="PLAYERVALUE" Type="Double" />
+  </EntityType>
+  <EntityType Name="USERTEAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TeamName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Player1" Type="Int32" />
+    <Property Name="Player2" Type="Int32" />
+    <Property Name="Player3" Type="Int32" />
+    <Property Name="Player4" Type="Int32" />
+    <Property Name="Player5" Type="Int32" />
+    <Property Name="Player6" Type="Int32" />
+    <Property Name="Player7" Type="Int32" />
+    <Property Name="Player8" Type="Int32" />
+    <Property Name="Player9" Type="Int32" />
+    <Property Name="Player10" Type="Int32" />
+    <Property Name="Player11" Type="Int32" />
+    <Property Name="Player12" Type="Int32" />
+    <Property Name="Player13" Type="Int32" />
+    <Property Name="Player14" Type="Int32" />
+    <Property Name="Player15" Type="Int32" />
+  </EntityType>
+</Schema>

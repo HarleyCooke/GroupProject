@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ballstatsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ALL">
+          <Key>
+            <PropertyRef Name="PLAYER" />
+            <PropertyRef Name="TEAM" />
+            <PropertyRef Name="YEAR" />
+          </Key>
+          <Property Name="PLAYER" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TEAM" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="AGE" Type="float" />
+          <Property Name="GP" Type="float" />
+          <Property Name="W" Type="float" />
+          <Property Name="L" Type="float" />
+          <Property Name="MIN" Type="float" />
+          <Property Name="PTS" Type="nvarchar" MaxLength="255" />
+          <Property Name="FGM" Type="float" />
+          <Property Name="FGA" Type="float" />
+          <Property Name="FG%" Type="nvarchar" MaxLength="255" />
+          <Property Name="3PM" Type="nvarchar" MaxLength="255" />
+          <Property Name="3PA" Type="nvarchar" MaxLength="255" />
+          <Property Name="3P%" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTM" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTA" Type="nvarchar" MaxLength="255" />
+          <Property Name="FT%" Type="nvarchar" MaxLength="255" />
+          <Property Name="OREB" Type="float" />
+          <Property Name="DREB" Type="float" />
+          <Property Name="REB" Type="float" />
+          <Property Name="AST" Type="float" />
+          <Property Name="TOV" Type="float" />
+          <Property Name="STL" Type="float" />
+          <Property Name="BLK" Type="float" />
+          <Property Name="PF" Type="float" />
+          <Property Name="FP" Type="float" />
+          <Property Name="DD2" Type="float" />
+          <Property Name="TD3" Type="float" />
+          <Property Name="+/-" Type="float" />
+          <Property Name="RAT" Type="float" />
+          <Property Name="DIFF" Type="float" />
+          <Property Name="RPMRAT" Type="float" />
+          <Property Name="ORRAT" Type="float" />
+          <Property Name="YEAR" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="W/L" Type="float" />
+        </EntityType>
+        <EntityType Name="PLAYER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PLAYER" Type="nvarchar" MaxLength="255" />
+          <Property Name="Position" Type="nvarchar" MaxLength="255" />
+          <Property Name="TEAM" Type="nvarchar" MaxLength="255" />
+          <Property Name="GP" Type="float" />
+          <Property Name="AGE" Type="float" />
+          <Property Name="W" Type="float" />
+          <Property Name="L" Type="float" />
+          <Property Name="MIN" Type="float" />
+          <Property Name="FGM" Type="float" />
+          <Property Name="FGA" Type="float" />
+          <Property Name="FG%" Type="float" />
+          <Property Name="TPM" Type="float" />
+          <Property Name="TPA" Type="float" />
+          <Property Name="TP%" Type="float" />
+          <Property Name="FTM" Type="float" />
+          <Property Name="FTA" Type="float" />
+          <Property Name="FT%" Type="float" />
+          <Property Name="OREB" Type="float" />
+          <Property Name="DREB" Type="float" />
+          <Property Name="REB" Type="float" />
+          <Property Name="AST" Type="float" />
+          <Property Name="TOV" Type="float" />
+          <Property Name="STL" Type="float" />
+          <Property Name="BLK" Type="float" />
+          <Property Name="PF" Type="float" />
+          <Property Name="FP" Type="float" />
+          <Property Name="DD2" Type="float" />
+          <Property Name="TD3" Type="float" />
+          <Property Name="+/-" Type="float" />
+          <Property Name="RAT" Type="float" />
+          <Property Name="W/L" Type="float" />
+          <Property Name="PLAYERVALUE" Type="float" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HashedPassword" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="USERTEAM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TeamName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Player1" Type="int" />
+          <Property Name="Player2" Type="int" />
+          <Property Name="Player3" Type="int" />
+          <Property Name="Player4" Type="int" />
+          <Property Name="Player5" Type="int" />
+          <Property Name="Player6" Type="int" />
+          <Property Name="Player7" Type="int" />
+          <Property Name="Player8" Type="int" />
+          <Property Name="Player9" Type="int" />
+          <Property Name="Player10" Type="int" />
+          <Property Name="Player11" Type="int" />
+          <Property Name="Player12" Type="int" />
+          <Property Name="Player13" Type="int" />
+          <Property Name="Player14" Type="int" />
+          <Property Name="Player15" Type="int" />
+        </EntityType>
+        <EntityContainer Name="ballstatsModelStoreContainer">
+          <EntitySet Name="ALL" EntityType="Self.ALL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PLAYER" EntityType="Self.PLAYER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERTEAM" EntityType="Self.USERTEAM" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ballstatsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ballstatsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="USERS" EntityType="ballstatsModel.USERS" />
+          <EntitySet Name="PLAYER" EntityType="ballstatsModel.PLAYER" />
+          <EntitySet Name="USERTEAM" EntityType="ballstatsModel.USERTEAM" />
+        </EntityContainer>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HashedPassword" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PLAYER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TEAM" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GP" Type="Double" />
+          <Property Name="AGE" Type="Double" />
+          <Property Name="W" Type="Double" />
+          <Property Name="L" Type="Double" />
+          <Property Name="MIN" Type="Double" />
+          <Property Name="FGM" Type="Double" />
+          <Property Name="FGA" Type="Double" />
+          <Property Name="FG_" Type="Double" />
+          <Property Name="TPM" Type="Double" />
+          <Property Name="TPA" Type="Double" />
+          <Property Name="TP_" Type="Double" />
+          <Property Name="FTM" Type="Double" />
+          <Property Name="FTA" Type="Double" />
+          <Property Name="FT_" Type="Double" />
+          <Property Name="OREB" Type="Double" />
+          <Property Name="DREB" Type="Double" />
+          <Property Name="REB" Type="Double" />
+          <Property Name="AST" Type="Double" />
+          <Property Name="TOV" Type="Double" />
+          <Property Name="STL" Type="Double" />
+          <Property Name="BLK" Type="Double" />
+          <Property Name="PF" Type="Double" />
+          <Property Name="FP" Type="Double" />
+          <Property Name="DD2" Type="Double" />
+          <Property Name="TD3" Type="Double" />
+          <Property Name="C___" Type="Double" />
+          <Property Name="RAT" Type="Double" />
+          <Property Name="W_L" Type="Double" />
+          <Property Name="PLAYERVALUE" Type="Double" />
+        </EntityType>
+        <EntityType Name="USERTEAM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TeamName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Player1" Type="Int32" />
+          <Property Name="Player2" Type="Int32" />
+          <Property Name="Player3" Type="Int32" />
+          <Property Name="Player4" Type="Int32" />
+          <Property Name="Player5" Type="Int32" />
+          <Property Name="Player6" Type="Int32" />
+          <Property Name="Player7" Type="Int32" />
+          <Property Name="Player8" Type="Int32" />
+          <Property Name="Player9" Type="Int32" />
+          <Property Name="Player10" Type="Int32" />
+          <Property Name="Player11" Type="Int32" />
+          <Property Name="Player12" Type="Int32" />
+          <Property Name="Player13" Type="Int32" />
+          <Property Name="Player14" Type="Int32" />
+          <Property Name="Player15" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ballstatsModelStoreContainer" CdmEntityContainer="ballstatsEntities">
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="ballstatsModel.USERS">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="HashedPassword" ColumnName="HashedPassword" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PLAYER">
+            <EntityTypeMapping TypeName="ballstatsModel.PLAYER">
+              <MappingFragment StoreEntitySet="PLAYER">
+                <ScalarProperty Name="PLAYERVALUE" ColumnName="PLAYERVALUE" />
+                <ScalarProperty Name="W_L" ColumnName="W/L" />
+                <ScalarProperty Name="RAT" ColumnName="RAT" />
+                <ScalarProperty Name="C___" ColumnName="+/-" />
+                <ScalarProperty Name="TD3" ColumnName="TD3" />
+                <ScalarProperty Name="DD2" ColumnName="DD2" />
+                <ScalarProperty Name="FP" ColumnName="FP" />
+                <ScalarProperty Name="PF" ColumnName="PF" />
+                <ScalarProperty Name="BLK" ColumnName="BLK" />
+                <ScalarProperty Name="STL" ColumnName="STL" />
+                <ScalarProperty Name="TOV" ColumnName="TOV" />
+                <ScalarProperty Name="AST" ColumnName="AST" />
+                <ScalarProperty Name="REB" ColumnName="REB" />
+                <ScalarProperty Name="DREB" ColumnName="DREB" />
+                <ScalarProperty Name="OREB" ColumnName="OREB" />
+                <ScalarProperty Name="FT_" ColumnName="FT%" />
+                <ScalarProperty Name="FTA" ColumnName="FTA" />
+                <ScalarProperty Name="FTM" ColumnName="FTM" />
+                <ScalarProperty Name="TP_" ColumnName="TP%" />
+                <ScalarProperty Name="TPA" ColumnName="TPA" />
+                <ScalarProperty Name="TPM" ColumnName="TPM" />
+                <ScalarProperty Name="FG_" ColumnName="FG%" />
+                <ScalarProperty Name="FGA" ColumnName="FGA" />
+                <ScalarProperty Name="FGM" ColumnName="FGM" />
+                <ScalarProperty Name="MIN" ColumnName="MIN" />
+                <ScalarProperty Name="L" ColumnName="L" />
+                <ScalarProperty Name="W" ColumnName="W" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="GP" ColumnName="GP" />
+                <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="NAME" ColumnName="PLAYER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERTEAM">
+            <EntityTypeMapping TypeName="ballstatsModel.USERTEAM">
+              <MappingFragment StoreEntitySet="USERTEAM">
+                <ScalarProperty Name="Player15" ColumnName="Player15" />
+                <ScalarProperty Name="Player14" ColumnName="Player14" />
+                <ScalarProperty Name="Player13" ColumnName="Player13" />
+                <ScalarProperty Name="Player12" ColumnName="Player12" />
+                <ScalarProperty Name="Player11" ColumnName="Player11" />
+                <ScalarProperty Name="Player10" ColumnName="Player10" />
+                <ScalarProperty Name="Player9" ColumnName="Player9" />
+                <ScalarProperty Name="Player8" ColumnName="Player8" />
+                <ScalarProperty Name="Player7" ColumnName="Player7" />
+                <ScalarProperty Name="Player6" ColumnName="Player6" />
+                <ScalarProperty Name="Player5" ColumnName="Player5" />
+                <ScalarProperty Name="Player4" ColumnName="Player4" />
+                <ScalarProperty Name="Player3" ColumnName="Player3" />
+                <ScalarProperty Name="Player2" ColumnName="Player2" />
+                <ScalarProperty Name="Player1" ColumnName="Player1" />
+                <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
